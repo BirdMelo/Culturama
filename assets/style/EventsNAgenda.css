@@ -1,0 +1,42 @@
+.eventos__lista, .agenda__lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 1.5rem;
+    row-gap: 1rem;
+}
+.eventos__item, .agenda__item {
+    flex-grow: 1;
+    max-width: 400px;
+}
+.eventos__botao, .agenda__botao{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.eventos__item {
+    display: grid;
+    align-items: center;
+    grid-template-rows: 1fr repeat(3,25px);
+    row-gap: 7px;
+}
+.eventos__item img {
+    grid-area: 1/1/2/3;
+}
+.eventos__item h4 {
+    grid-area: 3/1/4/1;
+}
+.eventos__item h5 {
+    grid-area: 4/1/5/1;
+}
+.eventos__item button {
+    grid-area: 4/2/5/3;
+    justify-self: end;
+}
+
+@media screen and (min-width:720px) {
+    .eventos__botao, .agenda__botao {
+        justify-content: end;
+    }
+}
